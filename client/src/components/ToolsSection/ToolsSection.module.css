@@ -1,0 +1,191 @@
+.toolsSection {
+  padding: 4rem 0;
+  background-color: var(--primary-white);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-black);
+  margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.toolCard {
+  background: var(--light-gray);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.toolCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-green);
+}
+
+.toolIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.toolTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-black);
+  margin-bottom: 1rem;
+}
+
+.toolDescription {
+  color: var(--dark-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.proSection {
+  margin-top: 4rem;
+}
+
+.proCard {
+  background: linear-gradient(135deg, var(--primary-black) 0%, var(--text-gray) 100%);
+  border-radius: 16px;
+  padding: 3rem;
+  color: var(--primary-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.proCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  opacity: 0.1;
+}
+
+.proContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.proText h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--accent-green);
+}
+
+.proText p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.proFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.proFeatures li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.proPrice {
+  text-align: center;
+}
+
+.priceTag {
+  margin-bottom: 2rem;
+}
+
+.oldPrice {
+  display: block;
+  font-size: 1rem;
+  text-decoration: line-through;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.newPrice {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 0.25rem;
+}
+
+.priceInfo {
+  display: block;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .toolsSection {
+    padding: 2rem 0;
+  }
+
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+
+  .toolsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .toolCard {
+    padding: 1.5rem;
+  }
+
+  .proCard {
+    padding: 2rem;
+  }
+
+  .proContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .proText h3 {
+    font-size: 1.5rem;
+  }
+
+  .newPrice {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+

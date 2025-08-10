@@ -1,0 +1,141 @@
+.tickerTape {
+  background: #1a1a1a;
+  color: white;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.tickerContainer {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tickerTrack {
+  display: flex;
+  animation: ticker 60s linear infinite;
+  height: 100%;
+  align-items: center;
+}
+
+.tickerItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 15px;
+  white-space: nowrap;
+  height: 100%;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+.symbol {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #ffd700;
+  min-width: 45px;
+  flex-shrink: 0;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.change {
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 2px 4px;
+  border-radius: 3px;
+  min-width: 75px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.positive {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.negative {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pausar animação no hover */
+.tickerTape:hover .tickerTrack {
+  animation-play-state: paused;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .tickerTape {
+    height: 40px;
+  }
+  
+  .tickerItem {
+    padding: 0 12px;
+    min-width: 170px;
+    gap: 5px;
+  }
+  
+  .symbol {
+    font-size: 0.8rem;
+    min-width: 40px;
+  }
+  
+  .price {
+    font-size: 0.8rem;
+  }
+  
+  .change {
+    font-size: 0.65rem;
+    min-width: 70px;
+    padding: 1px 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tickerTape {
+    height: 35px;
+  }
+  
+  .tickerItem {
+    padding: 0 8px;
+    min-width: 150px;
+    gap: 3px;
+  }
+  
+  .symbol {
+    font-size: 0.7rem;
+    min-width: 35px;
+  }
+  
+  .price {
+    font-size: 0.7rem;
+  }
+  
+  .change {
+    font-size: 0.6rem;
+    min-width: 60px;
+    padding: 1px 2px;
+  }
+}
