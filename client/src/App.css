@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
 }
 
-/* Variáveis CSS para cores do tema */
+/* Variáveis CSS */
 :root {
   --primary-black: #000000;
   --primary-white: #ffffff;
